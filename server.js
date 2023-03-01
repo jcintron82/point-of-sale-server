@@ -1,7 +1,9 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-app.use(cors());
+app.use(cors({
+  origin: 'https://pos-client.onrender.com/'
+}));
 const mongoose = require("mongoose");
 const passport = require("passport");
 var LocalStrategy = require('passport-local').Strategy;

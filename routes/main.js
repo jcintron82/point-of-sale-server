@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 router.use(express.json())// add this line
 
+
 const authController = require("../controllers/login");
 const homeController = require("../controllers/home");
 const loginController = require("../controllers/login");

@@ -1,6 +1,10 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+app.use(cors({
+  'Access-Control-Allow-Origin': '*'
+}));
+
 const mongoose = require("mongoose");
 const passport = require("passport");
 var LocalStrategy = require('passport-local').Strategy;
@@ -17,6 +21,7 @@ const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const User = require("./DBschemas/employees");
 // const postRoutes = require("./routes/posts");
+
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" });
 

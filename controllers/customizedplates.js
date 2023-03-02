@@ -21,7 +21,6 @@ module.exports = {
     res.setHeader('Access-Control-Allow-Credentials', true);
     res.status(200).json({ success: 'GETTING SOMEWHERE'});
     // Pass to next layer of middleware
-    next();
     },
     getIndex: (req, res) => {
     //   checkIfLoggedIn()

@@ -40,8 +40,6 @@ module.exports = {
     
         // Pass to next layer of middleware
         res.json({ message: cursor }); // Website you wish to allow to connect
-       
-        next();
         cursor.splice(0);
       });
       

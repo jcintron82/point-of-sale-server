@@ -120,3 +120,4 @@ if (process.env.PORT) {
   });
 }
 
+module.exports = app;

@@ -27,7 +27,6 @@ module.exports = {
     //   checkIfLoggedIn()
       const dbQuery = items.find({ Item: searchValue }, (err, cursor) => {
         // console.log(cursor);
-        res.json({ message: cursor }); // Website you wish to allow to connect
         res.setHeader('Access-Control-Allow-Origin', '*');
     
         // Request methods you wish to allow
@@ -41,7 +40,8 @@ module.exports = {
         res.setHeader('Access-Control-Allow-Credentials', true);
     
         // Pass to next layer of middleware
-        next();
+        res.json({ message: cursor }); // Website you wish to allow to connect
+       
         next();
         cursor.splice(0);
       });

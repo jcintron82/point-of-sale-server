@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 app.use(cors({
-  'Access-Control-Allow-Origin': '*'
+  origin: '*'
 }));
 
 const mongoose = require("mongoose");
